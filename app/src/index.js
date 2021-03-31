@@ -38,6 +38,18 @@ const App = {
     await createStar(name, id).send({ from: this.account });
     App.setStatus("New Star Owner is " + this.account + ".");
   },
+
+  setStarNameOut: function (message) {
+    const outputMessage = document.getElementById("starNameOut");
+    outputMessage.innerHTML = message;
+  },
+
+  lookUptokenIdToStarInfo: async function () {
+    const { lookUptokenIdToStarInfo } = this.meta.methods;
+    const id = document.getElementById("starIdIn").value;
+    const starName = await lookUptokenIdToStarInfo(id).call();
+    App.setStarNameOut("Star name for ID " + id + " is: " + starName + ".");
+  },
 };
 
 window.App = App;

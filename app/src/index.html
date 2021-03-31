@@ -18,13 +18,21 @@
     <h1>Create a Star</h1>
     <br><label for="starName">Star Name:</label><input type="text" id="starName"></input>
     <br><label for="starId">Star ID:</label><input type="text" id="starId"></input>
-    <br><br><button id="createStar" onclick="App.createStar()">Create Star</button>
-    <br><br>
+    <br><button id="createStar" onclick="App.createStar()">Create Star</button>
+    <br>
     <br>
 
     <span id="status"></span>
 
     <br>
+    <h1>Get star name by ID</h1>
+    <br><label for="starIdIn">Star ID:</label><input type="number" id="starIdIn"></input>
+    <br><button id="getStarName" onclick="App.lookUptokenIdToStarInfo()">Get Star Name</button>
+    <br>
+    <br>
+
+    <span id="starNameOut"></span>
+
     <script src="index.js"></script>
   </body>
 </html>
